@@ -10,7 +10,7 @@ First, I needed to get over an initial hurdle. I wanted to build a desktop appli
 
 Electrometeor combines Electron and Meteor to allow you to easily create desktop applications that work both 100% offline & online.
 
-This combined set of resources creates an application that works offline and uses NodeJS to allow access to system modules. For example, one of the first things I tested was the node-AppleScript module, which allowed me to create an iTunes controller that played/paused the song every 5 seconds.
+This combined set of resources creates an application that works offline and uses NodeJS to allow access to system modules. For example, one of the first things I tested was the *https://github.com/TooTallNate/node-applescript[node-applescript]* module, which allowed me to create an iTunes controller that played/paused the song every 5 seconds.
 
 Because Meteor is included, you can easily use DDP to connect to a web server if you want to sync data online.
 
