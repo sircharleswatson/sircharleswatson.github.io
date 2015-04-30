@@ -2,39 +2,38 @@
 
 :hp-tags: Meteor, Electron, JavaScript
 
+.What is Electrometeor?
 
-Usually when you have an idea for a project, something is there standing in your way, trying to keep you from achieving your goal. An idea sparked in my mind a few months back for a desktop application but I could not find a simple way to achieve the goal of building that project. So what did I do? I gave up of course! Although not completely. The idea kept prompting me every couple weeks but I just ignored it. But this past week, with a lot of free time on my hands, I decided to give it a go.
+Typically when you have an idea for a project, there is some sort of barrier blocking the path which would bring the idea into reality. I've had an idea for a desktop application built in Meteor for a few months. Unfortunately, I could not find a simple way to build this project. So what did I do? I gave up of course! Although not completely. I continued to mull over the idea for a few months, until recently. I had a lot of time on my hands, and decided to give it a go!
 
-But first, I needed to get over an initial hurdle. I want to build a desktop application _with Meteor_. I knew about Electron (formerly known as Atom-Shell) for creating desktop applications, but there werent many resources on integrating Meteor inside of Electron.
+First, I needed to get over an initial hurdle. I wanted to build a desktop application with _Meteor_. I knew about Electron (formerly known as Atom-Shell) for creating desktop applications, but there weren't many resources on integrating Meteor inside of Electron.
 
 Electrometeor combines Electron and Meteor to allow you to easily create desktop applications that work both 100% offline & online.
 
-Electrometeor creates an app that works offline and It uses node under the hood to allow you to access system modules. For example, one of the first things I tested was the node-applescript module which let me use applescript to create an Itunes controller that played/paused the song every 5 seconds.
+This combined set of resources creates an application that works offline and uses NodeJS to allow access to system modules. For example, one of the first things I tested was the node-AppleScript module, which allowed me to create an iTunes controller that played/paused the song every 5 seconds.
 
 Because Meteor is included, you can easily use DDP to connect to a web server if you want to sync data online.
 
-As I mentioned, I created Electrometeor to scratch my own itch. I wanted a way to create desktop apps with Meteor. I have a project in mind that I will be starting soon that will use this.
+.Challenges
 
-Right now, Electrometeor is very simple. There are a lot of modules that Electron includes that will be helpful in the boilerplate. Prior to building this, I had no experience with Electron/Atom-Shell, so this is a learning experience for me. I want to continue to improve Electrometeor and make it the best desktop application boilerplate for Meteor developers. As I work on my project idea, I will be adding things that I think work well in a boilerplate. 
+During the development of Electrometeor, I encountered several challenges that forced me to grow as a developer. I had to learn about bash scripting by digging into the https://kitematic.com/[Kitematic] code and studying it one line at a time. Prior to this project, I thought bash scripts were scary, but now I know how incredibly useful they can be. For some reason it never clicked in my mind that a bash script is basically just a list of terminal commands. In the 5 or 6 months I've been using Meteor, I had never used the build tool, but because of the way Electron works I had to use it to create a bundled Meteor app before it could be run. Electron uses Node.js to start a child process that runs the Meteor build. This was uncharted territory for me, and I had to read a lot about the functionality of child_process.
 
-The good people at Kitematic are much to thank for Electrometeor. They had previously built a desktop app with Atom-Shell and Meteor so a lot of what I've done comes directly from their development of the Kitematic app.
+.The Future
 
-I learned a lot about bash scripting by digging into their code and studying it one line at a time. Before, I thought bash scripts were scary but now I know how great they are.
+Currently, Electrometeor is very simple. There are a lot of modules that Electron includes that would be helpful in the boilerplate. Prior to building this, I had no experience with Electron/Atom-Shell, so this is a learning experience for me. I want to continue to improve Electrometeor and make it the best desktop application boilerplate for Meteor developers. As I work on my project idea, I will be adding things that I think work well in a boilerplate. One thing I can think of right now is the https://github.com/atom/electron/blob/master/docs/api/menu.md[menu] functionality.
 
-I've also learned about the Meteor build tool. In the 5 or 6 months that I've been using Meteor, I've never had to use it before working on this project.
 
-Inside Electron, it uses Node to start a child process that runs the Meteor build. This is all new information to me and I had to read a lot about child_process and all of the things it can do.
+To get started making desktop applications with Meteor, go to the follow link:
+https://github.com/sircharleswatson/Electrometeor
 
-.Shoutouts:
-- Kitematic - a lot of the code comes from an older version of their app
 
-I want to give another shoutout to Kitematic. If it wasn't for them, I probably wouldn't have built Electrometeor.
+The good people at Kitematic are much to thank for Electrometeor. They had previously built a desktop app with Atom-Shell and Meteor, so a lot of what I’ve done comes directly from their development of the Kitematic app. If it wasn’t for them, I probably wouldn’t have built Electrometeor.
 
 Also, I want to give a shoutout to https://twitter.com/johnstonbl01[@johnstonbl01] for taking the time to edit this post, and thank you to everyone who took the time to read it!
 
 If you have any questions, comments, or concerns, feel free to hit me up on Twitter: http://twitter.com/sircharlesw727[@SirCharlesW727]
 
-Or you can join the gitter chat room to talk about Electrometeor there:
+Or you can join the Gitter chat room to talk about Electrometeor there:
 image:https://badges.gitter.im/Join%20Chat.svg[
 "Electrometeor Gitter",
 link="https://gitter.im/sircharleswatson/Electrometeor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
@@ -64,3 +63,6 @@ Outline:
 - Don't know a ton about bash scripting so I had to learn that to get the app to build
 - Never used the meteor build tool
 - never used child_process in node
+
+.Shoutouts:
+- Kitematic - a lot of the code comes from an older version of their app
