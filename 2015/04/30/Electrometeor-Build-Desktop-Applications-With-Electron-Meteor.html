@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Electrometeor - Build Desktop Applications With Electron + Meteor</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//sircharleswatson.github.io/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//sircharleswatson.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://sircharleswatson.github.io/2015/04/30/Electrometeor-Build-Desktop-Applications-With-Electron-Meteor.html" />
+    
+    <meta property="og:site_name" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Electrometeor - Build Desktop Applications With Electron + Meteor" />
+    <meta property="og:description" content="What is Electrometeor? Typically when you have an idea for a project, there is some sort of barrier blocking the path which would bring the idea into reality. I&amp;#8217;ve had an idea for a desktop application built in..." />
+    <meta property="og:url" content="https://sircharleswatson.github.io/2015/04/30/Electrometeor-Build-Desktop-Applications-With-Electron-Meteor.html" />
+    <meta property="article:published_time" content="2015-04-30T05:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-04-30T20:35:50.333Z" />
+    <meta property="article:tag" content="Meteor" />
+    <meta property="article:tag" content="Electron" />
+    <meta property="article:tag" content="JavaScript" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Electrometeor - Build Desktop Applications With Electron + Meteor" />
+    <meta name="twitter:description" content="What is Electrometeor? Typically when you have an idea for a project, there is some sort of barrier blocking the path which would bring the idea into reality. I&amp;#8217;ve had an idea for a desktop application built in..." />
+    <meta name="twitter:url" content="https://sircharleswatson.github.io/2015/04/30/Electrometeor-Build-Desktop-Applications-With-Electron-Meteor.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "",
+    "author": {
+        "@type": "Person",
+        "name": "Charles Watson",
+        "image": "https://avatars.githubusercontent.com/u/2199663?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": ""
+    },
+    "headline": "Electrometeor - Build Desktop Applications With Electron + Meteor",
+    "url": "https://sircharleswatson.github.io/2015/04/30/Electrometeor-Build-Desktop-Applications-With-Electron-Meteor.html",
+    "datePublished": "2015-04-30T05:00:00.000Z",
+    "dateModified": "2015-04-30T20:35:50.333Z",
+    "keywords": "Meteor,  Electron,  JavaScript",
+    "description": "What is Electrometeor? Typically when you have an idea for a project, there is some sort of barrier blocking the path which would bring the idea into reality. I&amp;#8217;ve had an idea for a desktop application built in..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="" href="https://sircharleswatson.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template tag-Meteor tag-Electron tag-JavaScript">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://sircharleswatson.github.io">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://sircharleswatson.github.io/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post tag-Meteor tag-Electron tag-JavaScript">
+
+        <header class="post-header">
+            <h1 class="post-title">Electrometeor - Build Desktop Applications With Electron + Meteor</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-04-30">30 April 2015</time>  on <a href="https://sircharleswatson.github.io/tag/Meteor">Meteor</a>, <a href="https://sircharleswatson.github.io/tag/Electron"> Electron</a>, <a href="https://sircharleswatson.github.io/tag/JavaScript"> JavaScript</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="paragraph">
+<div class="title">What is Electrometeor?</div>
+<p>Typically when you have an idea for a project, there is some sort of barrier blocking the path which would bring the idea into reality. I&#8217;ve had an idea for a desktop application built in Meteor for a few months. Unfortunately, I could not find a simple way to build this project. So what did I do? I gave up of course! Although not completely. I continued to mull over the idea for a few months, until recently. I had a lot of time on my hands, and decided to give it a go!</p>
+</div>
+<div class="paragraph">
+<p>First, I needed to get over an initial hurdle. I wanted to build a desktop application with <em>Meteor</em>. I knew about Electron (formerly known as Atom-Shell) for creating desktop applications, but there weren&#8217;t many resources on integrating Meteor inside of Electron.</p>
+</div>
+<div class="paragraph">
+<p>Electrometeor combines Electron and Meteor to allow you to easily create desktop applications that work both 100% offline &amp; online.</p>
+</div>
+<div class="paragraph">
+<p>This combined set of resources creates an application that works offline and uses NodeJS to allow access to system modules. For example, one of the first things I tested was the node-AppleScript module, which allowed me to create an iTunes controller that played/paused the song every 5 seconds.</p>
+</div>
+<div class="paragraph">
+<p>Because Meteor is included, you can easily use DDP to connect to a web server if you want to sync data online.</p>
+</div>
+<div class="paragraph">
+<div class="title">Challenges</div>
+<p>During the development of Electrometeor, I encountered several challenges that forced me to grow as a developer. I had to learn about bash scripting by digging into the <a href="https://kitematic.com/">Kitematic</a> code and studying it one line at a time. Prior to this project, I thought bash scripts were scary, but now I know how incredibly useful they can be. For some reason it never clicked in my mind that a bash script is basically just a list of terminal commands. In the 5 or 6 months I&#8217;ve been using Meteor, I had never used the build tool, but because of the way Electron works I had to use it to create a bundled Meteor app before it could be run. Electron uses Node.js to start a child process that runs the Meteor build. This was uncharted territory for me, and I had to read a lot about the functionality of child_process.</p>
+</div>
+<div class="paragraph">
+<div class="title">The Future</div>
+<p>Currently, Electrometeor is very simple. There are a lot of modules that Electron includes that would be helpful in the boilerplate. Prior to building this, I had no experience with Electron/Atom-Shell, so this is a learning experience for me. I want to continue to improve Electrometeor and make it the best desktop application boilerplate for Meteor developers. As I work on my project idea, I will be adding things that I think work well in a boilerplate. One thing I can think of right now is the <a href="https://github.com/atom/electron/blob/master/docs/api/menu.md">menu</a> functionality.</p>
+</div>
+<div class="paragraph">
+<p>To get started making desktop applications with Meteor, go to the follow link:
+<a href="https://github.com/sircharleswatson/Electrometeor" class="bare">https://github.com/sircharleswatson/Electrometeor</a></p>
+</div>
+<div class="paragraph">
+<p>The good people at Kitematic are much to thank for Electrometeor. They had previously built a desktop app with Atom-Shell and Meteor, so a lot of what I’ve done comes directly from their development of the Kitematic app. If it wasn’t for them, I probably wouldn’t have built Electrometeor.</p>
+</div>
+<div class="paragraph">
+<p>Also, I want to give a shoutout to <a href="https://twitter.com/johnstonbl01">@johnstonbl01</a> for taking the time to edit this post, and thank you to everyone who took the time to read it!</p>
+</div>
+<div class="paragraph">
+<p>If you have any questions, comments, or concerns, feel free to hit me up on Twitter: <a href="http://twitter.com/sircharlesw727">@SirCharlesW727</a></p>
+</div>
+<div class="paragraph">
+<p>Or you can join the Gitter chat room to talk about Electrometeor there:
+<span class="image"><a class="image" href="https://gitter.im/sircharleswatson/Electrometeor?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Electrometeor Gitter"></a></span></p>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/2199663?v=3)"><span class="hidden">Charles Watson's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">Charles Watson</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Minneapolis, Mn</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Electrometeor%20-%20Build%20Desktop%20Applications%20With%20Electron%20%2B%20Meteor&amp;url=https://sircharleswatson.github.io/2015/04/30/Electrometeor-Build-Desktop-Applications-With-Electron-Meteor.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://sircharleswatson.github.io/2015/04/30/Electrometeor-Build-Desktop-Applications-With-Electron-Meteor.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://sircharleswatson.github.io/2015/04/30/Electrometeor-Build-Desktop-Applications-With-Electron-Meteor.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'sircharleswatson'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://sircharleswatson.github.io"></a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//sircharleswatson.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//sircharleswatson.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '&lt;script&gt;   (function(i,s,o,g,r,a,m){i[&#x27;GoogleAnalyticsObject&#x27;]=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,&#x27;script&#x27;,&#x27;//www.google-analytics.com/analytics.js&#x27;,&#x27;ga&#x27;);    ga(&#x27;create&#x27;, &#x27;UA-62459807-1&#x27;, &#x27;auto&#x27;);   ga(&#x27;send&#x27;, &#x27;pageview&#x27;);  &lt;/script&gt;', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
