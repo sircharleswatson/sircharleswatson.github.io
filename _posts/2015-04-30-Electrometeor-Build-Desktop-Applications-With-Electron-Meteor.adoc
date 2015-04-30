@@ -1,0 +1,53 @@
+= Electrometeor - Build Desktop Applications With Electron + Meteor
+
+:hp-tags: Meteor, Electron, JavaScript
+
+.What is it?
+- A boilerplate using Electron and Meteor
+
+Usually when you have an idea for a project, something is there standing in your way, trying to keep you from achieving your goal. An idea sparked in my mind a few months back for a desktop application but I could not find a simple way to achieve the goal of building that project. So what did I do? I gave up of course! Although not completely. The idea kept prompting me every couple weeks but I just ignored it. But this past week, with a lot of free time on my hands, I decided to give it a go.
+
+But first, I needed to get over an initial hurdle. I want to build a desktop application _with Meteor_. I knew about Electron (formerly known as Atom-Shell) for creating desktop applications, but there werent many resources on integrating Meteor inside of Electron.
+
+Electrometeor combines Electron and Meteor to allow you to easily create desktop applications that work both 100% offline & online.
+
+
+
+
+.What does it do?
+- allows you to work offline
+- can access system libraries
+- can use Meteor to connect to a web server
+
+
+
+
+
+
+
+.Why did you create it?
+- I've had a product idea in my mind for a while that I wanted to make.
+
+.Where do you see it going?
+- I want to expand it to include more of the options that Electron allows
+- Want it to be the best desktop app boilerplate for Meteor
+
+.What were some of the challenges you faced during development?
+- Don't know a ton about bash scripting so I had to learn that to get the app to build
+- Never used the meteor build tool
+- never used child_process in node
+
+.Shoutouts:
+- Kitematic - a lot of the code comes from an older version of their app
+
+
+What technologies you used, how did you come up with this, what's in plan for the future, if this might be a good alternative to classical native desktop apps (include advantages and disadvantages)
+
+blog post:
+
+- what is it?
+- what does it do?
+- why did you create it?
+- where do you see it going?
+- what were some of the challenges you faced during development?
+- shoutouts
